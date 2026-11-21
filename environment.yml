@@ -1,0 +1,19 @@
+name: polymermd
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - lammps
+  - openmpi
+  - packmol
+  - mdanalysis
+  - jupyterlab
+  - ipykernel
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - ase
+  - pip
+  - pip:
+      - moltemplate
