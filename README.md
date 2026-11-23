@@ -100,20 +100,20 @@ rm Miniforge3-\*.sh
 ### Step 2: Download this repository
 
 ```bash
-git clone https://github.com/PoonamParkar/LAMMPS\_Hands\_on\_workshop.git
-cd LAMMPS\_Hands\_on\_workshop
+git clone https://github.com/PoonamParkar/LAMMPS_Hands_on_workshop.git
+cd LAMMPS_Hands_on_workshop
 ```
 
 **If `git clone` asks for a username or password**, do not enter one. Press Ctrl+C and use the ZIP download instead:
 
-1. Open https://github.com/PoonamParkar/LAMMPS\_Hands\_on\_workshop in your browser.
+1. Open https://github.com/PoonamParkar/LAMMPS_Hands_on_workshop in your browser.
 2. Click the green **Code** button, then **Download ZIP**.
 3. Unzip it and copy the folder into your Ubuntu home folder. On Windows, open `\\\\wsl$\\Ubuntu-24.04\\home\\<your-username>` in File Explorer and paste the folder there.
 4. In the Ubuntu terminal, go into the folder. Check its exact name first:
 
 ```bash
-   ls \~
-   cd \~/LAMMPS\_Hands\_on\_workshop-main
+   ls 
+   cd /LAMMPS_Hands_on_workshop-main
    ```
 
 Keep the workshop folder **inside the Ubuntu home folder** (`/home/<your-username>`), not under `/mnt/c/...`. Files on the Windows drive run much slower in WSL.
