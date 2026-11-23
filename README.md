@@ -1,14 +1,12 @@
 # Hands-on Molecular Dynamics of Polymer Systems Using LAMMPS
 
-From model setup to trajectory analysis. A three-day workshop on polyethylene, run locally.
+From model setup to trajectory analysis. A three-day workshop on polymer.
 
-* **Day 1:** LAMMPS, polymer models, data files, force fields, a basic input script
-* **Day 2:** Energy minimisation, introductory NVT/NPT, thermodynamic monitoring
+* **Day 1:** Introduction to MD simulation, basic setup. 
+* **Day 2:** Polymer model, Energy minimisation, introductory NVT/NPT, thermodynamic monitoring
 * **Day 3:** Trajectory visualisation, structural properties, conformations, introductory dynamics
 
-## Before Day 1: install everything (about 20-30 minutes)
-
-Please complete every step below **before the first session** and finish with the check script in Step 6.
+## Installation
 
 ### Supported systems
 
@@ -29,7 +27,7 @@ wsl --install -d Ubuntu
 Restart if asked, then open "Ubuntu" from the Start menu and create a username and password. Run **all remaining commands inside the Ubuntu terminal**. First, install basic tools:
 
 ```bash
-sudo apt update \&\& sudo apt upgrade -y
+sudo apt update \\\&\\\& sudo apt upgrade -y
 sudo apt install -y git curl wget
 ```
 
@@ -77,29 +75,29 @@ Start JupyterLab with `jupyter lab` and choose the kernel **Python (polymermd)**
 
 ### Step 5: Install OVITO (visualisation)
 
-Download **OVITO Basic** (free) for your operating system from https://www.ovito.org/#download. On Windows, install the Windows version of OVITO (not inside WSL). You can open your WSL files from Windows at `\\\\wsl$\\Ubuntu\\home\\<your-username>\\polymermd-workshop`.
+Download **OVITO Basic** (free) for your operating system from https://www.ovito.org/#download. On Windows, install the Windows version of OVITO (not inside WSL). You can open your WSL files from Windows at `\\\\\\\\wsl$\\\\Ubuntu\\\\home\\\\<your-username>\\\\polymermd-workshop`.
 
 ### Step 6: Check your installation
 
 From the repository folder, with the environment active:
 
 ```bash
-bash scripts/check\_setup.sh
+bash scripts/check\\\_setup.sh
 ```
 
-You should see `\[ OK ]` for every line and the message "All checks passed". If any line shows `\[FAIL]`, see Troubleshooting. If you cannot fix it, open a GitHub Issue and paste the full output of the script.
+You should see `\\\[ OK ]` for every line and the message "All checks passed". If any line shows `\\\[FAIL]`, see Troubleshooting. If you cannot fix it, open a GitHub Issue and paste the full output of the script.
 
 ## Troubleshooting
 
 **`conda: command not found`**: close and reopen the terminal. If it persists, rerun the Miniforge installer and answer yes to conda init.
 
-**`\[FAIL] polymermd environment is active`**: run `conda activate polymermd`.
+**`\\\[FAIL] polymermd environment is active`**: run `conda activate polymermd`.
 
 **`mpirun` complains about not enough slots**: add `--oversubscribe`, e.g. `mpirun --oversubscribe -np 4 lmp -in test/in.melt`.
 
 **`mpirun` refuses to run as root** (typically only in containers): add `--allow-run-as-root`.
 
-**LAMMPS executable name**: the conda-forge build provides `lmp`. If `lmp` is not found, try `lmp\_mpi`.
+**LAMMPS executable name**: the conda-forge build provides `lmp`. If `lmp` is not found, try `lmp\\\_mpi`.
 
 **Moltemplate not found**: with the environment active, run `pip install moltemplate`.
 
@@ -121,10 +119,4 @@ environment.yml     conda environment definition
 scripts/            helper scripts (setup check)
 test/               small test input for the LAMMPS/MPI check
 ```
-
-Workshop material is added before each session.
-
-## Tested with
-
-LAMMPS: *version*  |  Open MPI: *version*  |  Python: *version*  |  OVITO: *version*  |  OS: *system*
 
