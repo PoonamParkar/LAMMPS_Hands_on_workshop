@@ -169,18 +169,18 @@ Download **OVITO Basic** (free) for your operating system from https://www.ovito
 From the repository folder, with the environment active (`(polymermd)` in the prompt):
 
 ```bash
-bash check\_setup.sh
+bash check_setup.sh
 ```
 
-You should see `\[ OK ]` on every line and the message "All checks passed". If any line shows `\[FAIL]`, see Troubleshooting. If you cannot fix it, open a GitHub Issue and paste the full output of the script.
+You should see `[ OK ]` on every line and the message "All checks passed". If any line shows `\[FAIL]`, see Troubleshooting. If you cannot fix it, open a GitHub Issue and paste the full output of the script.
 
 ## Troubleshooting
 
 **`conda: command not found`**: close and reopen the terminal. If it persists, run `\~/miniforge3/bin/conda init bash` and reopen the terminal again.
 
-**`\[FAIL] polymermd environment is active`**: run `conda activate polymermd`.
+**`[FAIL] polymermd environment is active`**: run `conda activate polymermd`.
 
-**`GLIBC\_2.38 not found` when running LAMMPS**: your Ubuntu is too old. Install Ubuntu 24.04 (Step 0).
+**`GLIBC_2.38 not found` when running LAMMPS**: your Ubuntu is too old. Install Ubuntu 24.04 (Step 0).
 
 **`git clone` asks for a password**: use the ZIP download in Step 2.
 
@@ -204,7 +204,7 @@ You should see `\[ OK ]` on every line and the message "All checks passed". If a
 mpirun --version
 lmp -h | head -40
 moltemplate.sh -h | head
-mpirun -np 4 lmp -in test/in.melt
+mpirun -np 4 lmp -in in.melt
 ```
 
 ## Repository layout
