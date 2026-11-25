@@ -88,13 +88,7 @@ which conda
 If you see `conda: command not found`, run the following, then close and reopen the terminal and check again:
 
 ```bash
-\~/miniforge3/bin/conda init bash
-```
-
-You can delete the installer file afterwards:
-
-```bash
-rm Miniforge3-\*.sh
+~/miniforge3/bin/conda init bash
 ```
 
 ### Step 2: Download this repository
