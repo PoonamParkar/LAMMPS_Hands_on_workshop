@@ -215,6 +215,10 @@ scripts/             helper scripts (setup check)
 test/                small test input for the LAMMPS/MPI check
 ```
 
+
+```bash
+mpirun -np 8 lmp -in in.01_minimise  -log log.mimimise
+```
 ## Tested with
 
 Ubuntu 24.04 (WSL2) | LAMMPS: *version* | Open MPI: *version* | Python: *version* | OVITO: *version*
